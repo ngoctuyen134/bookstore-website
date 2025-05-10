@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Sách</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <!-- Liên kết tới file CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="section-wrapper">
+    <div class="book-image">
+      <div class="slider">
+        <img src="https://sachphamleminh.io.vn/wp-content/uploads/2025/04/book1-1.png" alt="Sách 1" class="slide active">
+        <img src="https://sachphamleminh.io.vn/wp-content/uploads/2025/04/quan-tri-tien-3-e1745000368481.jpg" alt="Sách 2" class="slide">
+        <img src="https://sachphamleminh.io.vn/wp-content/uploads/2025/04/Screenshot-2025-04-19-011555.png" alt="Sách 3" class="slide">
+      </div>
+    </div>
+
+    <div class="content">
+      <h2>Chúng Tôi Cung Cấp Những Tựa Sách Chất Lượng Cao!</h2>
+      <p>
+        Từ sách kinh doanh, phát triển bản thân đến truyện, tiểu thuyết và nhiều thể loại hấp dẫn khác.
+      </p>
+      <ul>
+        <li><i class="fa-regular fa-circle-check"></i> Giao hàng nhanh chóng</li>
+        <li><i class="fa-regular fa-circle-check"></i> Sách chính hãng, chất lượng cao</li>
+        <li><i class="fa-regular fa-circle-check"></i> Đóng gói cẩn thận</li>
+        <li><i class="fa-regular fa-circle-check"></i> Đổi trả dễ dàng</li>
+        <li><i class="fa-regular fa-circle-check"></i> Ưu đãi hấp dẫn mỗi ngày</li>
+      </ul>
+      <a href="#start-shopping" class="shop-button">
+        <i class="fa-solid fa-cart-shopping"></i> BẮT ĐẦU MUA SẮM
+      </a>
+    </div>
+  </div>
+  <!-- JavaScript chuyển slide -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.remove('active');
+          if (i === index) slide.classList.add('active');
+        });
+      }
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+      }
+      setInterval(nextSlide, 3000);
+    });
+  </script>
+</body>
+</html>
+
