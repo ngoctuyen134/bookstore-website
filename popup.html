@@ -1,0 +1,107 @@
+<!-- Popup HTML -->
+<div id="popupPromo" class="popup-overlay">
+  <div class="popup-content">
+    <button class="popup-close" onclick="closePopup()">&times;</button>
+
+    <!-- Thông báo phát hành -->
+    <h4 class="exclusive">PHÁT HÀNH ĐỘC QUYỀN bởi PHAMLEMINH CO., LTD</h4>
+    <h2 class="title">TÂN PHÙ THỦY TÀI CHÍNH</h2>
+
+    <!-- Ảnh sản phẩm -->
+    <a href="http://sachphamleminh.io.vn/product/tanphuthuytaichinh/" target="_blank">
+      <img src="http://sachphamleminh.io.vn/wp-content/uploads/2025/04/book1.png" alt="Tân Phù Thủy Tài Chính" style="max-width: 80%; border-radius: 10px; margin: 10px auto;">
+    </a>
+
+    <!-- Mô tả ngắn và quà tặng -->
+    <p class="subtitle">Tư duy giàu – Hành động thật</p>
+    <p class="gift">🎁 Free Ship + Bookmark</p>
+
+    <!-- Nút CTA "MUA NGAY" -->
+    <button class="cta-button" onclick="window.location.href='http://sachphamleminh.io.vn/product/tanphuthuytaichinh/'">MUA NGAY</button>
+  </div>
+</div>
+
+<!-- Popup CSS -->
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 20px; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+    visibility: hidden;
+    transition: top 0.3s ease; 
+  }
+  .popup-overlay.active {
+    visibility: visible;
+  }
+  .popup-content {
+    background: #fff8ed;
+    padding: 20px;
+    max-width: 380px; 
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);  
+    text-align: center;
+    position: relative;
+    font-family: sans-serif;
+  }
+  .popup-close {
+    position: absolute;
+    top: -6px; 
+    right: -6px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #888;
+    cursor: pointer;
+  }
+  .exclusive {
+    color: #c0392b;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  .title {
+    font-size: 18px;
+    color: #e67e22;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 18px;  
+    font-weight: 500;
+    margin: 0 0 4px 0;  
+  }
+  .gift {
+    color: #27ae60;
+    font-size: 18px;  
+    margin: 0;  
+  }
+  .cta-button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 12px 20px;  
+    border: none;
+    font-size: 16px;  
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;  
+  }
+</style>
+
+<!-- Popup JS -->
+<script>
+  function closePopup() {
+    document.getElementById('popupPromo').classList.remove('active'); 
+  }
+
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      document.getElementById('popupPromo').classList.add('active'); 
+    }, 1000);
+  });
+</script>
